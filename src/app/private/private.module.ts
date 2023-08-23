@@ -3,7 +3,8 @@ import {CommonModule} from '@angular/common';
 
 import {PrivateRoutingModule} from './private-routing.module';
 import {ContainerLayoutComponent, SidebarComponent} from "./components";
-import {SharedModule} from "@shared";
+import {SharedModule} from "../shared";
+
 
 const COMPONENTS = [
   ContainerLayoutComponent,

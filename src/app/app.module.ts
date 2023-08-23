@@ -5,12 +5,14 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {HttpClientModule} from "@angular/common/http";
-import {CoreModule} from "@core";
-import {SharedModule} from "@shared";
+
 import {NgxsRouterPluginModule} from "@ngxs/router-plugin";
 import {NgxsModule} from "@ngxs/store";
 import {NgxsReduxDevtoolsPluginModule} from "@ngxs/devtools-plugin";
-import {environment} from '@environment'
+import {CoreModule} from "./core";
+import {SharedModule} from "./shared";
+import {environment} from "../environments/environment";
+
 
 
 const COMPONENTS = [AppComponent];

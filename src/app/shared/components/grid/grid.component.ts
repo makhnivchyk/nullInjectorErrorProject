@@ -1,5 +1,5 @@
 import {Component, inject, Injector, Input, TemplateRef} from '@angular/core';
-import {GridColumnInterface} from '@core/types';
+import {GridColumnInterface} from "../../../core";
 
 @Component({
     selector: 'app-grid',

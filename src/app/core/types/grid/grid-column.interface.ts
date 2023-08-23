@@ -1,4 +1,4 @@
-import {FilterTypes} from '@core/dictionaries';
+import {FilterTypes} from "../../dictionaries";
 
 export interface GridColumnInterface {
     field: string;

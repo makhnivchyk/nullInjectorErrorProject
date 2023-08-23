@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {GridColumnInterface} from '@core/types';
+import {GridColumnInterface} from "../../../../../core";
 
 @Component({
     selector: 'app-batches-page',

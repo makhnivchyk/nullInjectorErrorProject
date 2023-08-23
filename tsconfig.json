@@ -26,24 +26,24 @@
       "dom"
     ],
     "paths": {
-      "@environment": [
-        "./src/environments/environment.ts"
-      ],
-      "@core/types": [
-        "./src/app/core/types/index.ts"
-      ],
-      "@core/dictionaries": [
-        "./src/app/core/dictionaries/index.ts"
-      ],
-      "@shared/components": [
-        "./src/app/shared/components/index.ts"
-      ],
-      "@shared": [
-        "./src/app/shared/index.ts"
-      ],
-      "@core": [
-        "./src/app/core/index.ts"
-      ]
+//      "@environment": [
+//        "./src/environments/environment.ts"
+//      ],
+//      "@core/types": [
+//        "./src/app/core/types/index.ts"
+//      ],
+//      "@core/dictionaries": [
+//        "./src/app/core/dictionaries/index.ts"
+//      ],
+//      "@shared/components": [
+//        "./src/app/shared/components/index.ts"
+//      ],
+//      "@shared": [
+//        "./src/app/shared/index.ts"
+//      ],
+//      "@core": [
+//        "./src/app/core/index.ts"
+//      ]
     }
   },
   "angularCompilerOptions": {

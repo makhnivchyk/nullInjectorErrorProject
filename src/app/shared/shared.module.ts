@@ -3,8 +3,9 @@ import {CommonModule} from '@angular/common';
 import {TelerikModule} from "./telerik.module";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
-import {CoreModule} from "@core";
-import {GridComponent, GridExportComponent} from "@shared/components";
+import {GridComponent, GridExportComponent} from "./components";
+import {CoreModule} from "../core";
+
 
 const MODULES = [TelerikModule, FormsModule, ReactiveFormsModule, RouterModule, CoreModule];
 
