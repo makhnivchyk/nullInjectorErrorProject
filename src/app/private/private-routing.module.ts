@@ -1,28 +1,28 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import {ContainerLayoutComponent} from "./components";
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '',
+    redirectTo: 'ng/eop',
     pathMatch: 'full',
   },
   {
     path: '',
+    component: ContainerLayoutComponent,
     children: [
       {
-        path: '',
+        path: 'ng/eop',
         loadChildren: () =>
-          import('./private/private.module').then(
-            (m) => m.PrivateModule
-          ),
+          import('./modules/eop/eop.module').then((m) => m.EopModule),
       },
     ],
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class PrivateRoutingModule { }

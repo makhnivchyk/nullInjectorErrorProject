@@ -1,0 +1,17 @@
+<div class="page">
+    <app-grid [gridData]="gridData" [columns]="gridColumns" [isCheckboxColumn]="true" [headerGridTemplate]="headerGridTemplate"></app-grid>
+    <ng-template #headerGridTemplate>
+        <div class="w-100 d-flex flex-row justify-content-between">
+            <app-grid-export></app-grid-export>
+            <p>import</p>
+        </div>
+
+        <!--How to fix injectable issue? -->
+        <!--Here we can display components as we want(together, split, ..)-->
+        <!--Different component from shared module (exports, imports, filters)-->
+    </ng-template>
+<!--    <ng-template #actionButtonsGridTemplate>-->
+<!--        Different component from shared module (add, edit, ...)-->
+<!--    </ng-template>-->
+</div>
+

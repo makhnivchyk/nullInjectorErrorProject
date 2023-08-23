@@ -1,0 +1,152 @@
+.sidebar {
+    position: relative;
+
+    width: 265px !important;
+    height: 100%;
+
+    background: #333e4b;
+    color: #cedee2;
+
+    font-family: "Source Sans Pro Reg", serif;
+    font-size: 16px;
+
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    -o-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+
+
+    &__menu {
+        height: calc(100vh - 150px);
+    }
+
+    &__footer {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        background: inherit;
+
+        &-item {
+            color: #cedee2;
+            height: 35px;
+            width: 70px;
+            margin: 2px;
+            background-color: transparent;
+            border: none;
+            font-size: 25px;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            &:hover {
+                filter: brightness(1.3);
+            }
+        }
+    }
+
+    &_collapse {
+        width: 70px !important;
+
+        .menu {
+            &__item {
+                padding: 25px 0;
+
+                &:hover {
+                    .menu__ico-arrow {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &__ico {
+                left: 16px;
+            }
+
+            &__ico-arrow {
+                right: 7px;
+
+                opacity: 0;
+                visibility: hidden;
+                -webkit-transition: all 0.1s linear;
+                -moz-transition: all 0.1s linear;
+                -o-transition: all 0.1s linear;
+                transition: all 0.1s linear;
+            }
+        }
+    }
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    &__item {
+        position: relative;
+
+        padding: 15px 30px 15px 70px;
+
+        cursor: pointer;
+
+        &:hover:not(&_user) {
+            background-color: #3c4a5a;
+        }
+
+        &_active {
+            border-left: 3px solid #7f9fdc;
+            background-color: #3c4a5a;
+        }
+
+        &_user {
+            background-color: #325b7b;
+
+            &:hover {
+                background-color: #3e5c73;
+            }
+        }
+    }
+
+    &__ico {
+        position: absolute;
+        left: 15px;
+        bottom: 5px;
+
+        width: 41px;
+        height: 41px;
+
+        background: inherit;
+        background-repeat: no-repeat;
+    }
+
+    &__ico-arrow {
+        position: absolute;
+        right: 18px;
+        bottom: 18px;
+
+        height: 14px;
+        width: 8px;
+
+        background-repeat: no-repeat;
+        background-position: left;
+    }
+}
+
+
+.unreadCircle::after {
+    position: absolute;
+    right: 16px;
+    top: -1px;
+
+    height: 18px;
+    width: 18px;
+
+    border: 1.5px solid #1f425d;
+    border-radius: 50%;
+    background-color: #449d44;
+    content: '';
+}

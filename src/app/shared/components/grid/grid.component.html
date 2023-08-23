@@ -1,0 +1,27 @@
+<kendo-grid [filterable]="true" [kendoGridBinding]="gridData" [selectable]="{enabled: true}">
+    <kendo-grid-checkbox-column
+        *ngIf="isCheckboxColumn"
+        [class]="{ 'text-center': true }"
+        [columnMenu]="false"
+        [headerClass]="{ 'text-center': true }"
+        [resizable]="false"
+        [showSelectAll]="true"
+        [width]="45"
+    ></kendo-grid-checkbox-column>
+    <kendo-grid-column *ngFor="let column of columns" [field]="column.field" [filter]="column.filterType"
+                       [title]="column.title"></kendo-grid-column>
+    <ng-template
+        kendoGridToolbarTemplate
+        let-position="position"
+        position="both"
+    >
+        <ng-container *ngIf="position === 'top'"
+                      [ngTemplateOutlet]="headerGridTemplate"
+                      [ngTemplateOutletInjector]="injector"
+        ></ng-container>
+        <ng-container *ngIf="position === 'bottom'">
+            Here is going to be static grid footer
+        </ng-container>
+    </ng-template>
+</kendo-grid>
+

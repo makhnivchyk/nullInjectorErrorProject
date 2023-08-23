@@ -6,6 +6,8 @@
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "strictPropertyInitialization": false,
+    "strictNullChecks": false,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
@@ -22,7 +24,27 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@environment": [
+        "./src/environments/environment.ts"
+      ],
+      "@core/types": [
+        "./src/app/core/types/index.ts"
+      ],
+      "@core/dictionaries": [
+        "./src/app/core/dictionaries/index.ts"
+      ],
+      "@shared/components": [
+        "./src/app/shared/components/index.ts"
+      ],
+      "@shared": [
+        "./src/app/shared/index.ts"
+      ],
+      "@core": [
+        "./src/app/core/index.ts"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
